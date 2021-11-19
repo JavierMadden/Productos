@@ -1,0 +1,38 @@
+<div class="container col-md-6">
+  <div class="card">
+    <div class="card-header">
+      <h2>Productos</h2>
+    </div>
+    <div class="card-body">
+      <table class="table table-inverse table-striped">
+        <thead>
+          <tr >
+            <th colspan="5" class="bg-success text-white text-center h5">Productos</th>
+          </tr>
+          <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Precio</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of productos">
+            <th scope="row">{{product.idproducto}}</th>
+            <td>{{product.nombre}}</td>
+            <td>{{product.precio}}</td>
+            <td>{{product.descripcion}}</td>
+            <td>
+              <button (click)="addDetails(product)" class="btn btn-warning" type="button" style="margin-right: 10px;">
+                <i class="far fa-edit"></i>Agregar Detalles</button>
+              <button (click)="getDetails(product)" class="btn btn-success" type="button">
+                <i class="fas fa-outdent"></i>Ver Detalles</button>
+              </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

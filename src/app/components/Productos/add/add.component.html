@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h2>Nuevo Producto</h2>
+    </div>
+    <div class="card-body">
+
+      <form action="" >
+        <div class="form-group row ml-5">
+          <label for="" class="col-sm-6 col-form-label ml-5">Nombre</label>
+          <div class="col-sm-6">
+            <input type="text" name="nameProduc" class="form-control" placeholder = "Digite Nombre"
+            [(ngModel)]="produc.nombre">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="" class="col-sm-6 col-form-label">Precio</label>
+          <div class="col-sm-6">
+            <input type="number" name="priceProduc" class="form-control" placeholder="Digite Precio"
+            [(ngModel)]="produc.precio">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="" class="col-sm-6 col-form-label">Descripción</label>
+          <div class="col-sm-6">
+            <textarea type="text" name="descrProduc" class="form-control" placeholder="Digite Descripción"
+            [(ngModel)]="produc.descripcion"></textarea>
+          </div>
+        </div>
+          <button  (click)="Guardar()" class="btn btn-primary text-right">Guardar</button>
+      </form>
+    </div>
+  </div>
+</div>
